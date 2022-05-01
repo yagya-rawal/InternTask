@@ -1,38 +1,327 @@
-.App {
+body {
+  background: url(./bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.heading {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+div img {
   align-items: center;
+  position: relative;
+}
+
+.header {
+  display: grid;
+  place-items: center;   
+  /* grid-template-rows: 1fr;
+  place-items: center;    
+  place-content: center;
+   overflow: hidden;
+  max-height: clamp(450px, 50vh, 600px); */
+}
+
+.header div{
+  grid-area: 1/ 1/ 1/1;
+}
+.heading{
+  grid-area: 1/ 1/ 1/1;
+}
+
+h1 {
+  margin: 0%;
+}
+
+.container{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  background-color: white;
+  width: 630px;
+  
+  padding: 20px;
+  margin-top: 40px;
+  align-items: center;
+  /* border: 1px solid #ccc; */
+  box-shadow: 2px 2px 5px #cacdd1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inbox1{
+  display: grid;
+  grid: auto/ 1fr 1fr 1fr 1fr;
+}
+.views{
+  grid-area: 1/ 1/ 1/ 1;
+  padding: 10px 0px 0px 0px;
+  color: rgb(139, 135, 135);
+  font-weight: bold;
+}
+
+
+.fees{
+  grid-area: 1/ 4/ 1/ 5;
+  text-align: end;
+  padding: 10px 0px 0px 0px;
+  color: rgb(160, 157, 157);
+  font-weight: bold;
+
+}
+.inbox1  > h1{
+  grid-area: 1/ 4/ 1/ 5;
+}
+
+  /* Auto layout */
+.slider{
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 652px;
+height: 86px;
+left: 151px;
+top: 373px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 55px 0px;}
+
+.bill{
+  padding: 30px 0px 0px 0px;
+  color: rgb(160, 157, 157);
+
+  font-weight: bold;
+}
+
+.disc{
+  padding: 2px;
+  margin: 0px 0px 0px 50px ;
+  color: red;
+  background-color: rgb(214, 174, 136);
+  border-radius: 10px;
+  font-size: small;
+  font-weight: bold;
+}
+.Slider{
+  text-align: center;
+  padding: 5px 0px 0px 0px;
+}
+
+.billing{
+  padding: 15px;
+}
+
+.inbox2{
+  display: grid;
+  grid: auto / 1fr 1fr;
+  padding: 0px 10px;
+  margin-top: 30px;
+}
+
+.checkboxes{
+  display: grid;
+  grid-area: 1/ 1/ 1/ 2;
+}
+
+.trial{
+  display: grid;
+  grid-area: 1/ 2/ 1/ 3;
+}
+
+.checks{
+  padding: 3px 4px;
+  color: rgb(128, 125, 125);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.startbutton{
+  margin: 10% 23%;
+  padding: 4% 7%;
+  background-color:rgb(30, 14, 75);
+  border-radius: 30px;
+  color: rgb(221, 214, 214);
+  font-weight: bold;
+}
+
+.startbutton:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 430px) {
+  /* .box{
+    display: flex;
+  } */
+
+  .inbox1{
+    display: grid;
+    grid: 1fr 1fr/ 1fr 1fr 1fr 1fr;
+
   }
-  to {
-    transform: rotate(360deg);
+
+  .views{
+    display: grid;
+    grid-area: 1/2/2/4;
   }
+
+  .inbox1 > h1{
+    display: grid;
+    grid-area: 2/2/3/3;
+  }
+
+  .fees{
+    display: grid;
+    grid-area: 2/3/3/4;
+  }
+
+  .billing{
+    display: grid;
+    grid: 1fr 1fr/ 1fr 1fr 1fr;
+  }
+
+  .monthly{
+    display: grid;
+    grid-area: 1/1/2/2;
+  }
+
+  .toggle{
+    display: grid;
+    grid-area: 1/2/2/3;
+    margin: 25px;
+  }
+
+  .yearly{
+    display: grid;
+    grid-area: 1/3/2/4;
+  }
+
+  .disc{
+    display: grid;
+    grid-area: 2/3/3/4;
+  
+    text-align: center;
+    margin: 0px 0px 63px 0px;
+  }
+
+  .inbox2{
+    display: block;
+  }
+  .checkboxes{
+    display: grid;
+    grid: 1fr 1fr 1fr/ 1fr 2fr 1fr;
+
+  }
+
+  .first{
+    display: grid;
+    grid-area: 1/2/2/3;
+  }
+
+  .second{
+    display: grid;
+    grid-area: 2/2/3/3;
+  }
+
+  .third{
+    display: grid;
+    grid-area: 3/2/4/3;
+  }
+
+  .trial{
+    text-align: center;
+  }
+     
+  /* }
+  .views{
+    display: grid;
+    grid-area: 1/1/2/4;
+
+  }
+  .Slider{
+    display: grid;
+    grid-area: 2/1/3/4;
+  }
+  .inbox1 > h1{
+    display: grid;
+    grid-area: 3/2/4/3;
+  }
+  .inbox1 > .fees{
+    display: grid;
+    grid-area: 3/3/4/4;
+  }
+
+  .inbox1{
+    display: grid;
+    grid-area: 1/1/4/4;
+    grid: 1fr 1fr 1fr/1fr 1fr 1fr;
+  }
+
+  .inbox2{
+    display: grid;
+    grid-area: 4/1/6/4;
+    grid: 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  .monthly{
+    display: grid;
+    grid-area: 1/1/2/2;
+
+  }
+
+  .toggle{
+    display: grid;
+    grid-area: 1/2/2/3;
+  }
+
+  .yearly{
+    display: grid;
+    grid-area: 1/3/2/4;
+  }
+
+  .disc{
+    display: grid;
+    grid-area: 2/3/3/4;
+  }
+
+  .checkboxes{
+    display: grid;
+    grid-area: 6/1/9/4;
+    grid: 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  }
+
+  .first{
+    display: grid;
+    grid-area: 1/2/2/5;
+  }
+
+  .second{
+    display: grid;
+    grid-area: 2/2/3/5;
+  }
+
+  .third{
+    display: grid;
+    grid-area: 3/2/4/5;
+  }
+
+  .trial{
+    display: grid;
+    grid: ;
+  } */
+
+  
 }
