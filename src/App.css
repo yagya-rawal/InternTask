@@ -28,11 +28,7 @@ div img {
 .header {
   display: grid;
   place-items: center;   
-  /* grid-template-rows: 1fr;
-  place-items: center;    
-  place-content: center;
-   overflow: hidden;
-  max-height: clamp(450px, 50vh, 600px); */
+ 
 }
 
 .header div{
@@ -60,7 +56,7 @@ h1 {
   padding-top: 40px;
   margin-top: 40px;
   align-items: center;
-  /* border: 1px solid #ccc; */
+
   box-shadow: 2px 2px 5px #cacdd1;
   border-radius: 30px;
 }
@@ -90,7 +86,7 @@ h1 {
   color: rgb(60 , 62, 90);
 }
 
-  /* Auto layout */
+
 .slider{
 display: flex;
 flex-direction: row;
@@ -102,10 +98,6 @@ width: 652px;
 height: 86px;
 left: 151px;
 top: 373px;
-
-
-/* Inside auto layout */
-
 flex: none;
 order: 2;
 flex-grow: 0;
@@ -257,86 +249,12 @@ margin: 55px 0px;}
     text-align: center;
   }
      
-  /* }
-  .views{
-    display: grid;
-    grid-area: 1/1/2/4;
-
-  }
-  .Slider{
-    display: grid;
-    grid-area: 2/1/3/4;
-  }
-  .inbox1 > h1{
-    display: grid;
-    grid-area: 3/2/4/3;
-  }
-  .inbox1 > .fees{
-    display: grid;
-    grid-area: 3/3/4/4;
-  }
-
-  .inbox1{
-    display: grid;
-    grid-area: 1/1/4/4;
-    grid: 1fr 1fr 1fr/1fr 1fr 1fr;
-  }
-
-  .inbox2{
-    display: grid;
-    grid-area: 4/1/6/4;
-    grid: 1fr 1fr / 1fr 1fr 1fr;
-  }
-
-  .monthly{
-    display: grid;
-    grid-area: 1/1/2/2;
-
-  }
-
-  .toggle{
-    display: grid;
-    grid-area: 1/2/2/3;
-  }
-
-  .yearly{
-    display: grid;
-    grid-area: 1/3/2/4;
-  }
-
-  .disc{
-    display: grid;
-    grid-area: 2/3/3/4;
-  }
-
-  .checkboxes{
-    display: grid;
-    grid-area: 6/1/9/4;
-    grid: 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
-  }
-
-  .first{
-    display: grid;
-    grid-area: 1/2/2/5;
-  }
-
-  .second{
-    display: grid;
-    grid-area: 2/2/3/5;
-  }
-
-  .third{
-    display: grid;
-    grid-area: 3/2/4/5;
-  }
-
-  .trial{
-    display: grid;
-    grid: ;
-  } */
-
   
 }
+
+
+
+/*DARK MODE CSS*/
 
 .darkClass.App {
   background: url(./bgdark-pattern.svg);

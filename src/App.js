@@ -9,7 +9,7 @@ import React,{useState} from 'react';
 function App() {
    const [darkMode, setdarkMode] = useState(false)
    const darkModeToggleHandler=()=>{
-     console.log(darkMode)
+    console.log(darkMode)
     setdarkMode((darkMode)=>(!darkMode))
    }
   const visualModeClass=darkMode?"darkClass":"";
